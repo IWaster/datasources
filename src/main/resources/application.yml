@@ -1,0 +1,30 @@
+server:
+  #端口
+  port: 80
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    druid:
+      db1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://xxxx:3306/open?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+        username: root
+        password: xxxx
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+      db2:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://xxx:3306/open-logincenter?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+        username: root
+        password: xxxx
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
